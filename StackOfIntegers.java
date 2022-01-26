@@ -31,7 +31,10 @@ public class StackOfIntegers {
     }
 
     public int pop() {
+        //Subtract -1 since this.size is ahead by 1 after each push
         int temp = this.elements[this.size - 1];
+        //0 - 1 = -1 (out of range)
+        //Therefore, it has to stop at 0
         this.elements[this.size - 1] = 0;
         this.size -= 1;
         return temp;
